@@ -40,4 +40,6 @@ echo 'zstyle ':omz:update' mode auto' >> ~/.zshrc
 # Change default shell to zsh
 chsh -s $(which zsh)
 
+zsh
+
 echo "ZSH setup complete!"

@@ -32,7 +32,7 @@ cd ubuntu-server-setup
 You can also run the setup script for a single part. For example, to run the ZSH setup script:
 
 ```bash
-curl -fsSL setup.marvinvr.ch/scripts/zsh_setup.sh | bash
+curl -fsSL setup.marvinvr.ch/scripts/zsh.sh | bash
 ```
 
 ## Note
