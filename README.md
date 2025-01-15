@@ -16,7 +16,7 @@ My personal setup script for new Ubuntu machines. This script automatically conf
 You can run this setup with a single command:
 
 ```bash
-curl -fsSL setup.marvinvr.ch | bash
+curl -fsSL setup.marvinvr.ch/run.sh | bash
 ```
 
 Alternatively, you can clone this repository and run the setup script manually:
@@ -24,7 +24,15 @@ Alternatively, you can clone this repository and run the setup script manually:
 ```bash
 git clone https://github.com/marvinvr/ubuntu-server-setup.git
 cd ubuntu-server-setup
-./setup.sh
+./run.sh
+```
+
+### Partial Setup
+
+You can also run the setup script for a single part. For example, to run the ZSH setup script:
+
+```bash
+curl -fsSL setup.marvinvr.ch/scripts/zsh_setup.sh | bash
 ```
 
 ## Note
