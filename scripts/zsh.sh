@@ -39,5 +39,6 @@ echo 'zstyle ':omz:update' mode auto' >> ~/.zshrc
 
 # Change default shell to zsh
 sudo chsh -s $(which zsh) $USER
+echo "Setting default shell to zsh for user $USER. Please log out and log in again to use ZSH."
 
 echo "ZSH setup complete!"
