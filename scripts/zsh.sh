@@ -38,8 +38,6 @@ sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="mvr"/' ~/.zshrc
 echo 'zstyle ':omz:update' mode auto' >> ~/.zshrc
 
 # Change default shell to zsh
-chsh -s $(which zsh)
-
-zsh
+sudo chsh -s $(which zsh) $USER
 
 echo "ZSH setup complete!"
