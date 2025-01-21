@@ -10,6 +10,10 @@ My personal setup script for new Ubuntu machines. This script automatically conf
   - Enables automatic updates
 - Installs and configures Tailscale for VPN connectivity
   - Sets up with automatic DNS configuration
+- Installs modern command-line tools:
+  - bat (better cat with syntax highlighting)
+  - eza (modern ls replacement)
+  - btop (advanced system monitor)
 
 ## Usage
 
