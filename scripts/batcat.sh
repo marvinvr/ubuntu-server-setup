@@ -5,8 +5,11 @@ set -e
 
 echo "Setting up BAT..."
 
-# Update package list
-sudo apt-get update
+# Update package list if not already updated
+if [ -z "$APT_UPDATED" ]; then
+    sudo apt-get update
+    export APT_UPDATED=1
+fi
 
 # Install BAT
 if ! command -v batcat &> /dev/null; then

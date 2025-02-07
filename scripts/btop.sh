@@ -5,8 +5,11 @@ set -e
 
 echo "Setting up btop..."
 
-# Update package list
-sudo apt-get update
+# Update package list if not already updated
+if [ -z "$APT_UPDATED" ]; then
+    sudo apt-get update
+    export APT_UPDATED=1
+fi
 
 # Install btop
 if ! command -v btop &> /dev/null; then

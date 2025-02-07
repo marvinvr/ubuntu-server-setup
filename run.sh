@@ -7,6 +7,11 @@ set -e
 TEMP_DIR=$(mktemp -d)
 trap 'rm -rf "$TEMP_DIR"' EXIT
 
+# Run apt-get update once at the beginning and set environment variable
+echo "Updating package lists..."
+sudo apt-get update
+export APT_UPDATED=1
+
 # Download scripts
 curl -fsSL https://raw.githubusercontent.com/marvinvr/ubuntu-server-setup/main/scripts/zsh.sh -o "$TEMP_DIR/zsh.sh"
 curl -fsSL https://raw.githubusercontent.com/marvinvr/ubuntu-server-setup/main/scripts/batcat.sh -o "$TEMP_DIR/batcat.sh"
