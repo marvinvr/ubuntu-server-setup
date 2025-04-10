@@ -5,8 +5,10 @@ set -e
 
 echo "Setting up EZA..."
 
-# Update package list
-sudo apt-get update
+if [ -z "$APT_UPDATED" ] then
+    sudo apt-get update
+    export APT_UPDATED=1
+fi
 
 # Install EZA
 if ! command -v eza &> /dev/null; then
