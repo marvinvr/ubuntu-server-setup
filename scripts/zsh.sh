@@ -21,7 +21,7 @@ if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]
 fi
 
 # Add plugin to zshrc
-sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ~/.zshrc
+sed -i '' 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ~/.zshrc
 
 # Create theme
 cat > ~/.oh-my-zsh/custom/themes/mvr.zsh-theme << 'EOL'
@@ -34,7 +34,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 EOL
 
 # Set theme and auto-updates
-sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="mvr"/' ~/.zshrc
+sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="mvr"/' ~/.zshrc
 echo 'zstyle ':omz:update' mode auto' >> ~/.zshrc
 
 # Change default shell to zsh
