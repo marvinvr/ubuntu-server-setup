@@ -5,15 +5,14 @@ set -e
 
 echo "Setting up fasd..."
 
-# Update package list if not already updated
-if [ -z "$APT_UPDATED" ]; then
-    sudo apt-get update
-    export APT_UPDATED=1
-fi
-
 # Install fasd
 if ! command -v fasd &> /dev/null; then
-    sudo apt-get install -y fasd
+    git clone git@github.com:whjvenyl/fasd.git
+    cd fasd
+    brew install make
+    sudo make install
+    cd ..
+    rm -rf fasd
     echo "fasd installed successfully."
 else
     echo "fasd is already installed."

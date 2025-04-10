@@ -5,15 +5,9 @@ set -e
 
 echo "Setting up micro editor..."
 
-# Update package list if not already updated
-if [ -z "$APT_UPDATED" ]; then
-    sudo apt-get update
-    export APT_UPDATED=1
-fi
-
 # Install micro
 if ! command -v micro &> /dev/null; then
-    sudo apt-get install -y micro
+    brew install micro
     echo "micro installed successfully."
 else
     echo "micro is already installed."

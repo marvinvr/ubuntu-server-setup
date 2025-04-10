@@ -5,15 +5,9 @@ set -e
 
 echo "Setting up BAT..."
 
-# Update package list if not already updated
-if [ -z "$APT_UPDATED" ]; then
-    sudo apt-get update
-    export APT_UPDATED=1
-fi
-
 # Install BAT
 if ! command -v batcat &> /dev/null; then
-    sudo apt-get install -y bat
+    brew install bat
     echo "BAT installed successfully."
 else
     echo "BAT is already installed."

@@ -7,7 +7,7 @@ echo "Setting up btop..."
 
 # Update package list if not already updated
 if [ -z "$APT_UPDATED" ]; then
-    sudo apt-get update
+    brew install btop
     export APT_UPDATED=1
 fi
 

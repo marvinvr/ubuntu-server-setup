@@ -24,6 +24,7 @@ run_script() {
 }
 
 # Run scripts
+run_script "homebrew"
 run_script "zsh"
 run_script "batcat"
 run_script "eza"

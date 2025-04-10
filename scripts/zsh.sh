@@ -5,15 +5,9 @@ set -e
 
 echo "Setting up ZSH..."
 
-# Update package list if not already updated
-if [ -z "$APT_UPDATED" ]; then
-    sudo apt-get update
-    export APT_UPDATED=1
-fi
-
 # Install ZSH
 if ! command -v zsh &> /dev/null; then
-    sudo apt-get install zsh -y
+    brew install zsh
 fi
 
 # Install Oh-My-ZSH

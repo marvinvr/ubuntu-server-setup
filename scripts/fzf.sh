@@ -5,15 +5,9 @@ set -e
 
 echo "Setting up fzf..."
 
-# Update package list if not already updated
-if [ -z "$APT_UPDATED" ]; then
-    sudo apt-get update
-    export APT_UPDATED=1
-fi
-
 # Install fzf
 if ! command -v fzf &> /dev/null; then
-    sudo apt-get install -y fzf
+    brew install fzf
     echo "fzf installed successfully."
 else
     echo "fzf is already installed."
