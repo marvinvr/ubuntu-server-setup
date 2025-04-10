@@ -3,11 +3,6 @@
 # Exit on error
 set -e
 
-# Run apt-get update once at the beginning and set environment variable
-echo "Updating package lists..."
-sudo apt-get update
-export APT_UPDATED=1
-
 # Function to download and run a script
 run_script() {
     local script_name="$1"
