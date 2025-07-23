@@ -34,7 +34,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 EOL
 
 # Set theme and auto-updates
-sed -i '' 's/ZSH_THEME="robbyrussell"/ZSH_THEME="mvr"/' ~/.zshrc
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="mvr"/' ~/.zshrc
 echo 'zstyle ':omz:update' mode auto' >> ~/.zshrc
 
 # Change default shell to zsh
