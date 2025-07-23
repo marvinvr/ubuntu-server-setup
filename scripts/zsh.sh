@@ -21,7 +21,7 @@ if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions" ]
 fi
 
 # Add plugin to zshrc
-sed -i '' 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ~/.zshrc
+sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ~/.zshrc
 
 # Create theme
 cat > ~/.oh-my-zsh/custom/themes/mvr.zsh-theme << 'EOL'
